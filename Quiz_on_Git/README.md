@@ -3,7 +3,7 @@
 ## What you should do:
 
 1. Create a branch with your name and commit your changes to it.
-2. **To check the correct answers**: edit the README document and replace the ``- [ ]`` with ``- [x]`` to mark the correct answers.
+2. **To check the correct answers**: edit the README document and replace the ``[ ]`` with ``[x]`` to mark the correct answers.
 
 Question 1
 ----------
@@ -121,4 +121,53 @@ The commits C<sub>1</sub>, C<sub>2</sub>, ... are numbered in sequence, which me
       7. modify  and commit
       8. git checkout master
       9. modify  and commit
+
+Question 7
+----------
+You have three files in your working directory: `.gitignore`, `A.txt`, `B.txt` and `code.py`. The file `.gitignore` contains the following: `*.txt`. We run the following commands:
+
+1. git add *
+2. git commit -m "added all the files"
+3. git push --set-upstream origin master
+
+Do you think that all the files will be pushed to the remote? Explain why.
+
+Question 8
+----------
+Given the following scenario:
+
+               HEAD (refers to branch 'master')
+                |
+                v
+a---b---c---d  branch 'master' (refers to commit 'd')
+    ^
+    |
+  tag 'v2.0' (refers to commit 'b')
+
+Where will the HEAD point if we run the following command:
+``git checkout v2.0``
+
+Question 9:
+----------
+Consider the following scenario:
+
+![](graphics/quiz-p9.png)
+
+Explain what will happen when we run the following commands:
+
+1. git checkout experiment
+2. git rebase master
+3. git checkout master
+4. git merge experiment
+
+You need to specify where ``HEAD``, ``master`` and ``experiment`` will be after these commands, and you need to sketch theupdated history. You may add a graph as an answer in a folder named as follows: ``firstName_LastName_graphics``.
+
+Question 10:
+-----------
+We know that instead for adding then commiting, we can use the command ``git commit -m "my message" -a``. Here the ``-a`` flag adds all the modified files then do the commit.
+Suppose the following scenario: in the working directory, everything in up-to-date with your git repository. Now you create a new file named ``code.py``. Then to put it under version control, you run the following:
+
+``git commit -m "added code.py" -a``
+
+Is this correct? Explain why.
 
